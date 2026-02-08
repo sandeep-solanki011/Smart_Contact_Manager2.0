@@ -1,0 +1,10 @@
+<div class="parent-fragment" th:fragment="parent(content,title,script)">
+<h1>This is parent fragment</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Assumenda, ad.</p>
+<!--<h1>Value of x is <span th:text="${x}"></span></h1>
+<h2>Value of y is <span th:text="${y}"></span></h2>-->
+
+<div th:replace="~{${content}}"></div>
+
+
+</div>

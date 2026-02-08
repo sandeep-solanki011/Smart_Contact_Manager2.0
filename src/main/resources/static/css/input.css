@@ -1,0 +1,4 @@
+/* ./src/main/resources/static/css */
+@import "tailwindcss";
+
+@tailwind utilities;
