@@ -3,13 +3,100 @@
 <head>
     <title>SignUp page</title>
     </head>
-<body>
-    <div id="content">
-        <h1>Welcome to Signup page</h1>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+<div id="content" class="min-h-screen flex justify-center items-center px-4">
 
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis est ut, 
-            deserunt quas qui vel numquam similique? Fugiat voluptatibus temporibus cupiditate doloribus, fugit natus nisi ipsum facilis repellat excepturi nam!</p>
+  <div class="w-full max-w-xl">
+
+    <div class="block p-6 border-t-8 border-blue-700 bg-white  rounded-xl shadow 
+                hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        SignUp Here
+      </h5>
+
+      <p class="font-normal text-gray-400 dark:text-gray-400 mb-5">
+        Start Managing Contact on cloud.....
+      </p>
+
+      <!--Form fill   -->
+
+   <form data-th-action="@{'/do-register'}" 
+    method="post"  
+    data-th-object="${userForm}"
+    class="mt=5">
+
+                         <!--Name-->
+       <div class="mb-3">
+        <label for="name" class="block mb-2.5 text-sm font-medium text-heading">
+          Your Name
+        </label>
+
+        <input type="text" id="name" data-th-field="*{name}"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base
+          focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Enter here" required />
+      </div>
+
+                          <!--Email-->
+         <div class="mb-3">
+        <label for="email" class="block mb-2.5 text-sm font-medium text-heading">
+          Your email
+        </label>
+
+        <input type="email" id="email"  data-th-field="*{email}"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base
+          focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="name@flowbite.com" required />
+      </div>
+
+                  <!--Password-->
+         <div class="mb-3">
+        <label for="password" class="block mb-2.5 text-sm font-medium text-heading">
+          New Password
+        </label>
+
+        <input type="password" id="password" data-th-field="*{password}"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base
+          focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Enter password" required />
+      </div>
+
+          <!--Contact number-->
+        <div class="mb-3">
+        <label for="phone" class="block mb-2.5 text-sm font-medium text-heading">
+          Contact Number
+        </label>
+
+        <input type="text" id="phone"  data-th-field="*{phoneNumber}"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base
+          focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Enter phone number" required />
+      </div>
+
+      <!--About area-->
+      <div class="mb-3">
+    <label for="about" class="block mb-2.5 text-sm font-medium text-heading">Write Something about yourself</label>
+    <textarea id="about" data-th-field="*{about}" rows="4" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write here...."></textarea>
+
+      </div>
+             <!--Submit button-->
+      <div class="mb-3 flex justify-center space-x-4">
+        <button type="submit" class="px-3 py-2 rounded bg-gray-700 hover:bg-gray-800 text-white dark:bg-blue-600 dark:hover:bg-blue-800">SignUp</button>
+          <!--Reset Button-->
+         <button type="reset" class="px-3 py-2 rounded bg-green-800 hover:bg-green text-white dark:bg-green-800 dark:hover:bg-green-800">Reset</button>
+      </div>
+
+    
+
+   </form>
     </div>
+
+  </div>
+
+</div>
+
+
     <script>
     console.log("signup page");
     </script>
