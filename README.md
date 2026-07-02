@@ -2,33 +2,32 @@
 
 A full-stack Contact Management Web Application built using **Spring Boot**, **Spring Security**, **Hibernate (JPA)**, **MySQL**, and **Thymeleaf**.
 
-The application allows users to securely manage their personal contacts with authentication, profile management, and complete CRUD functionality.
+The application enables users to securely manage their contacts with authentication, profile management, contact image upload, and complete CRUD operations.
 
 ---
 
 ## 🚀 Features
 
-- User Registration & Login
-- Secure Authentication using Spring Security
-- Google OAuth2 Login
-- GitHub OAuth2 Login
-- Add New Contacts
-- Update Contacts
-- Delete Contacts
-- View All Contacts
-- Search Contacts
-- Upload Contact Profile Images
-- User Profile Management
-- Password Encryption using BCrypt
-- Responsive User Interface
-- Server-side Validation
-- Secure Session Management
+- 🔐 User Registration & Login
+- 🔒 Authentication with Spring Security
+- 🌐 Google OAuth2 Login
+- 🐙 GitHub OAuth2 Login
+- ➕ Add New Contacts
+- ✏️ Update Contacts
+- 🗑️ Delete Contacts
+- 📋 View All Contacts
+- 🔍 Search Contacts
+- 🖼️ Upload Contact Profile Images
+- 👤 User Profile Management
+- 🔑 Password Encryption using BCrypt
+- ✅ Server-side Validation
+- 📱 Responsive User Interface
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-## Backend
+### Backend
 - Java 21
 - Spring Boot
 - Spring MVC
@@ -36,7 +35,7 @@ The application allows users to securely manage their personal contacts with aut
 - Spring Data JPA
 - Hibernate
 
-## Frontend
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
@@ -44,31 +43,24 @@ The application allows users to securely manage their personal contacts with aut
 - Tailwind CSS
 - Flowbite
 
-## Database
+### Database
 - MySQL
 
-## Authentication
+### Authentication
 - Spring Security
 - Google OAuth2
 - GitHub OAuth2
 
-## Build Tool
+### Build Tool
 - Maven
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 Smart_Contact_Manager2.0
 │── src
-│   ├── main
-│   │   ├── java
-│   │   ├── resources
-│   │   │   ├── static
-│   │   │   ├── templates
-│   │   │   ├── application.properties
-│   │   │   └── application-local.properties
 │── pom.xml
 │── README.md
 ```
@@ -77,45 +69,51 @@ Smart_Contact_Manager2.0
 
 # ⚙️ Installation
 
-## Clone the Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/sandeep-solanki011/Smart_Contact_Manager2.0.git
 ```
 
-## Move to Project Folder
+## 2. Move into Project
 
 ```bash
 cd Smart_Contact_Manager2.0
 ```
 
-## Create MySQL Database
+## 3. Create MySQL Database
 
 ```sql
 CREATE DATABASE scm;
 ```
 
-## Configure Database
+## 4. Configure Database
 
-Update your `application-local.properties` file.
+Update your local configuration file (`application-local.properties`) with your own database credentials.
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/scm
-spring.datasource.username=root
-spring.datasource.password=your_password
+spring.datasource.username=YOUR_DB_USERNAME
+spring.datasource.password=YOUR_DB_PASSWORD
 ```
 
-## Configure OAuth Credentials
+## 5. Configure OAuth Credentials
+
+Add your own Google and GitHub OAuth credentials.
 
 ```properties
-spring.security.oauth2.client.registration.google.client-id=
-spring.security.oauth2.client.registration.google.client-secret=
+spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID
+spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET
 
-spring.security.oauth2.client.registration.github.client-id=
-spring.security.oauth2.client.registration.github.client-secret=
+spring.security.oauth2.client.registration.github.client-id=YOUR_GITHUB_CLIENT_ID
+spring.security.oauth2.client.registration.github.client-secret=YOUR_GITHUB_CLIENT_SECRET
 ```
 
-## Run the Project
+> **Note:** Actual database credentials and OAuth secrets are intentionally excluded from this repository for security reasons.
+
+## 6. Run the Application
+
+Using Maven:
 
 ```bash
 mvn spring-boot:run
@@ -129,7 +127,7 @@ ScmApplication.java
 
 ---
 
-# 🔄 Application Flow
+## 🔄 Application Flow
 
 ```text
 User
@@ -147,7 +145,7 @@ Service
 Repository
    │
    ▼
-Hibernate (JPA)
+Hibernate
    │
    ▼
 MySQL Database
@@ -155,19 +153,19 @@ MySQL Database
 
 ---
 
-# 📈 Future Enhancements
+## 📈 Future Enhancements
 
 - Email Verification
 - Forgot Password
 - Dark Mode
-- Import Contacts (CSV)
-- Export Contacts (PDF/Excel)
+- Import Contacts from CSV
+- Export Contacts to PDF/Excel
 - Favorite Contacts
 - Notifications
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Sandeep Solanki**
 
@@ -177,8 +175,8 @@ Java Full Stack Developer
 
 - Java
 - Spring Boot
-- Hibernate
 - Spring Security
+- Hibernate
 - MySQL
 - HTML
 - CSS
@@ -189,38 +187,37 @@ Java Full Stack Developer
 
 ---
 
-# 🤝 Contributing
+## 🤝 Contributing
 
-1. Fork the repository
-
-2. Create a new branch
+1. Fork this repository.
+2. Create a new branch.
 
 ```bash
 git checkout -b feature-name
 ```
 
-3. Commit your changes
+3. Commit your changes.
 
 ```bash
 git commit -m "Add new feature"
 ```
 
-4. Push the branch
+4. Push your branch.
 
 ```bash
 git push origin feature-name
 ```
 
-5. Open a Pull Request.
+5. Create a Pull Request.
 
 ---
 
-# ⭐ Support
+## ⭐ Support
 
-If you found this project helpful, please give it a ⭐ on GitHub.
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
 
 ---
 
-# 📄 License
+## 📄 License
 
 This project is developed for learning and educational purposes.
